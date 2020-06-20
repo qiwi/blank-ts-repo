@@ -1,2 +1,2 @@
-# ts-repo-blank
-Blank repository for TS OSS projects
+# blank-ts-repo
+Template repository for TS OSS projects
