@@ -12,7 +12,7 @@
     "definition": "typings/index.d.ts"
   },
   "scripts": {
-    "lint": "eslint \"src/**/*.+(js|ts)\"",
+    "lint": "eslint 'src/**/*.+(js|ts)'",
     "jest": "jest -w 1 --config=jest.config.json",
     "lint:fix": "yarn lint --fix",
     "test": "yarn lint && yarn jest",

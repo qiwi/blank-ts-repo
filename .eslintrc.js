@@ -4,4 +4,12 @@ module.exports = {
         'prettier',
         'prettier/@typescript-eslint',
     ],
+    overrides: [
+        {
+            files: ['*.js'],
+            rules: {
+                '@typescript-eslint/explicit-module-boundary-types': 'off'
+            }
+        }
+    ]
 };
