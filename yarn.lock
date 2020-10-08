@@ -4327,10 +4327,10 @@ eslint-config-prettier@^6.12.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-qiwi@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-qiwi/-/eslint-config-qiwi-1.8.0.tgz#f383f0df112c7c85141d572fddd394c4764addb0"
-  integrity sha512-Zy5vo07z3PRwlYJWvZ9jmCjSCEc2xcD3RUcUWt/uULcTePaMaTYxUBOMsMzVIVJdxVynNPfUg3Zth6NA6OrM5g==
+eslint-config-qiwi@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-qiwi/-/eslint-config-qiwi-1.9.0.tgz#aa839503fa8e7cb9951598a5f59c9da8f8f4f37e"
+  integrity sha512-Gk4JmaE4S2vEMPguQtjwv55yND77IwgDodUUMxPn6b/3rjcKLxRUjIwnL0LvDkY4sL04oXT3uNPhCixZS18apg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.3.0"
     "@typescript-eslint/parser" "^4.3.0"
