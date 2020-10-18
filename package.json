@@ -2,6 +2,9 @@
   "name": "blank-ts-repo",
   "version": "0.0.0",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Blank TS repo",
   "source": "src/main/ts/index.ts",
   "main": "target/bundle/blank-ts-repo.js",
