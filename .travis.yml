@@ -57,4 +57,4 @@ jobs:
       workspaces:
         use: linux-shared
       install: skip
-      script: npx semantic-release
+      script: npx -p @qiwi/semrel-toolkit semrel -e @qiwi/semrel-config
