@@ -32,6 +32,7 @@ jobs:
             - node_modules
     - <<: *build
       os: windows
+      if: branch = master AND env(CI_WIN_BUILD) = true
       # https://travis-ci.community/t/timeout-after-build-finished-and-succeeded/1336/2
       env: YARN_GPG=no
       workspaces:
@@ -60,6 +61,7 @@ jobs:
         - ./cc-test-reporter format-coverage -t lcov ./coverage/lcov.info
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - <<: *test
+      if: branch = master AND env(CI_WIN_BUILD) = true
       os: windows
       env: YARN_GPG=no
       node_js: 14
@@ -67,9 +69,9 @@ jobs:
         use: win-shared
 
     - stage: release
-      if: branch = master AND type != pull_request
+      if: branch = master AND type != pull_request AND env(CI_RELEASE) = true
       workspaces:
         use: linux-shared
       install: skip
-      script: echo 'Deploy step is disabled' && exit 0
-      # script: npx -p @qiwi/semrel-toolkit semrel -e @qiwi/semrel-config
+      script: npx -p @qiwi/semrel-toolkit semrel -e @qiwi/semrel-config
+      # script: echo 'Deploy step is disabled' && exit 0
