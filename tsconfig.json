@@ -4,12 +4,12 @@
     "baseUrl": "./src/main/ts/",
     "moduleResolution": "node",
     "target": "es5",
+    "module": "ES2015",
     "lib": [
       "es6",
       "esnext",
       "dom"
     ],
-    "module": "ES2015",
     "outDir": "./target/es5",
     "strict": true,
     "experimentalDecorators": true,
@@ -17,8 +17,9 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
-    "declaration": true,
+    "declaration": false,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
 
     "incremental": true,
     "tsBuildInfoFile": "./buildcache/.tsbuildinfo"
