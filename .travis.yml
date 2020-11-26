@@ -1,12 +1,23 @@
 language: node_js
-cache: npm
+cache: yarn
 node_js: 14
+install: skip
+dist: focal
 
 jobs:
+  fast_finish: true
   include:
-    - &build
+    - stage: verify
+      if: branch != master
       os: linux
+      install: yarn
+      script:
+        - yarn build
+        - yarn test
+    - &build
       stage: build
+      if: branch = master
+      os: linux
       install: yarn
       script: yarn build
       # https://docs.travis-ci.com/user/using-workspaces/
@@ -30,6 +41,7 @@ jobs:
 
     - &test
       stage: test
+      if: branch = master
       os: linux
       node_js: 12
       install: skip
@@ -57,4 +69,5 @@ jobs:
       workspaces:
         use: linux-shared
       install: skip
-      script: npx -p @qiwi/semrel-toolkit semrel -e @qiwi/semrel-config
+      script: echo 'Deploy step is disabled' && exit 0
+      # script: npx -p @qiwi/semrel-toolkit semrel -e @qiwi/semrel-config
