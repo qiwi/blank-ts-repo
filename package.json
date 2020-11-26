@@ -15,7 +15,7 @@
     "definition": "typings/index.d.ts"
   },
   "scripts": {
-    "lint": "eslint 'src/**/*.+(js|ts)'",
+    "lint": "eslint src/**/*.{ts,js}",
     "lint:fix": "yarn lint --fix",
     "jest": "jest -w 1 --config=jest.config.json",
     "test": "yarn lint && yarn jest",

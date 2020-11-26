@@ -1,6 +1,6 @@
-import { foo } from '../../main/ts'
+import { foo } from '../../../target/es6'
 
-describe('index', () => {
+describe('index (es6)', () => {
   it('foo() result equals bar', () => {
     expect(foo()).toBe('bar')
   })
