@@ -29,6 +29,7 @@ jobs:
             - flow-typed
             - typings
             - docs
+            - node_modules
     - <<: *build
       os: windows
       # https://travis-ci.community/t/timeout-after-build-finished-and-succeeded/1336/2
@@ -38,6 +39,7 @@ jobs:
           name: win-shared
           paths:
             - target
+            - node_modules
 
     - &test
       stage: test
