@@ -1,4 +1,5 @@
 {
+  "coverage": true,
   "testEnvironment": "node",
   "transform": {
     "^.+\\.tsx?$": "ts-jest",
