@@ -2,6 +2,7 @@ language: node_js
 cache: yarn
 node_js: 14
 install: skip
+os: linux
 dist: focal
 
 jobs:
@@ -9,7 +10,6 @@ jobs:
   include:
     - stage: verify
       if: branch != master AND type != pull_request
-      os: linux
       install: yarn
       script:
         - yarn build
@@ -19,7 +19,6 @@ jobs:
     - &build
       stage: build
       if: branch = master
-      os: linux
       install: yarn
       script: yarn build
       # https://docs.travis-ci.com/user/using-workspaces/
@@ -47,7 +46,6 @@ jobs:
     - &test
       if: branch = master AND type = pull_request AND env(CI_TEST) != false
       stage: test
-      os: linux
       install: skip
       script: yarn test
       workspaces:
