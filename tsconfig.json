@@ -11,6 +11,7 @@
       "dom"
     ],
     "outDir": "./target/es5",
+    "sourceMap": true,
     "strict": true,
     "experimentalDecorators": true,
     "noUnusedLocals": false,
