@@ -21,7 +21,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "npm-run-all -p -l lint test:unit test:depcheck test:depaudit",
     "test:unit": "jest --config=jest.config.json --runInBand",
-    "test:deps": "npm-run-all -p -l test:depcheck test:depaudit",
+    "test:deps": "npm-run-all -p -l test:depcheck test:depauditfix",
     "test:depcheck": "npx depcheck --ignores tslib,@swissquote/crafty-preset-jest,@types/jest,@types/node",
     "test:depaudit": "yarn audit --audit-level=moderate",
     "test:depauditfix": "npx yarn-audit-fix --audit-level=moderate",
