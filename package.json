@@ -42,6 +42,11 @@
     "postupdate": "yarn && yarn test:deps && yarn build && yarn test",
     "updeps": "npm_config_yes=true npx npm-upgrade"
   },
+  "resolutions": {
+    "**/postcss": "^8.2.15",
+    "**/globby/fast-glob": "^3.2.7",
+    "**/glob-parent": "^6.0.1"
+  },
   "dependencies": {
     "tslib": "^2.3.1"
   },
