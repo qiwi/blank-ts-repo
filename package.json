@@ -23,7 +23,7 @@
     "test:unit": "c8 -r html -r text -r lcov loadr -- uvu 'src/test/ts'",
     "test:target": "uvu -r @qiwi/esm src/test/js",
     "test:deps": "npm-run-all -p -l test:depcheck test:depauditfix",
-    "test:depcheck": "npm_config_yes=true npx depcheck --ignores tsc-esm-fix,tslib,@types/node,typedoc",
+    "test:depcheck": "npm_config_yes=true npx depcheck --ignores tsc-esm-fix,tslib,@types/node,typedoc,@qiwi/esm,tsm",
     "test:depaudit": "yarn audit --level=moderate --groups=dependencies; [[ $? -ge 4 ]] && exit 1 || exit 0",
     "test:depauditfix": "npm_config_yes=true npx yarn-audit-fix --audit-level=moderate",
     "test:report": "yarn test && yarn push:report",
