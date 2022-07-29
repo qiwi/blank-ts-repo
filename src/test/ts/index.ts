@@ -1,7 +1,10 @@
-import { foo } from '../../main/ts'
+import  { expect } from "earljs"
+import { test } from "uvu"
 
-describe('index', () => {
-  it('foo() result equals bar', () => {
-    expect(foo()).toBe('bar')
-  })
+import { foo } from '../../main/ts/index'
+
+test('index - foo() result equals bar', () => {
+  expect(foo()).toEqual('bar')
 })
+
+test.run()
