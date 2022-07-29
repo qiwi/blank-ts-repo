@@ -4294,11 +4294,6 @@ loader-utils@^3.2.0:
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-3.2.0.tgz#bcecc51a7898bee7473d4bc6b845b23af8304d4f"
   integrity sha512-HVl9ZqccQihZ7JM85dco1MvO9G+ONvxoGa9rkhzFsneGLKSUg1gJf9bWzhRhcvm2qChhWpebQhP44qxjKIUCaQ==
 
-loadr@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/loadr/-/loadr-0.1.1.tgz#7e9a5635471d1890d47ab321b3d3b873ca7d8c5f"
-  integrity sha512-lkI9ckI3cF+DQMbc0Fn/PgeMXQEL4gcOqUQQ1/tEzttQ2CPJvWzBsa9THeS4kqYQ2oNUVuDfk1+7PBZenvp3og==
-
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
