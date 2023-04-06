@@ -75,3 +75,5 @@ buildcache
 *.key
 *.pem
 *.cert
+.npmrc
+.yarnrc
