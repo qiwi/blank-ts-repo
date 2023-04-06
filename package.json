@@ -1,7 +1,6 @@
 {
   "name": "blank-ts-repo",
   "version": "0.0.0",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },
@@ -14,7 +13,6 @@
   "typescript": {
     "definition": "typings/index.d.ts"
   },
-
   "scripts": {
     "clean": "rimraf target typings flow-typed buildcache docs coverage buildstamp.json",
     "lint": "eslint src/**/*.{ts,js}",
@@ -24,7 +22,7 @@
     "test:unit": "c8 -r html -r text -r lcov uvu -r tsm 'src/test/ts'",
     "test:target": "uvu -r tsm -r @qiwi/esm src/test/js",
     "test:deps": "npm-run-all -p -l test:depcheck test:depauditfix",
-    "test:depcheck": "npm_config_yes=true npx depcheck --ignores tsc-esm-fix,tslib,@types/node,typedoc,@qiwi/esm,tsm",
+    "test:depcheck": "npm_config_yes=true npx depcheck --ignores mkdirp,rimraf,tsc-esm-fix,tslib,@types/node,typedoc,@qiwi/esm,tsm",
     "test:depaudit": "yarn audit --level=moderate --groups=dependencies; [[ $? -ge 4 ]] && exit 1 || exit 0",
     "test:depauditfix": "npm_config_yes=true npx yarn-audit-fix --audit-level=moderate",
     "test:report": "yarn test && yarn push:report",
@@ -44,36 +42,31 @@
     "postupdate": "yarn && yarn test:deps && yarn build && yarn test",
     "updeps": "npm_config_yes=true npx npm-upgrade"
   },
-  "resolutions": {
-    "**/postcss": "^8.2.15",
-    "**/globby/fast-glob": "^3.2.7",
-    "**/glob-parent": "^6.0.1"
-  },
   "dependencies": {
-    "tslib": "^2.4.0"
+    "tslib": "^2.5.0"
   },
   "devDependencies": {
     "@qiwi/esm": "^1.1.8",
-    "@qiwi/libdefkit": "^4.0.8",
+    "@qiwi/libdefkit": "^5.0.0",
     "@qiwi/npm-run-all": "^4.1.7",
-    "@types/node": "^16.10.3",
-    "c8": "^7.12.0",
+    "@types/node": "^18.15.11",
+    "c8": "^7.13.0",
     "coveralls": "^3.1.1",
-    "cpy-cli": "^4.1.0",
+    "cpy-cli": "^4.2.0",
     "earljs": "^0.2.3",
-    "eslint": "^8.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-qiwi": "^1.17.4",
-    "microbundle": "^0.15.0",
-    "mkdirp": "^1.0.4",
-    "prettier": "^2.7.1",
-    "prettier-config-qiwi": "^1.7.2",
-    "rimraf": "^3.0.2",
-    "terser": "^5.14.2",
-    "tsc-esm-fix": "^2.20.0",
-    "tsm": "^2.2.2",
-    "typedoc": "^0.23.9",
-    "typescript": "4.7.4",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-qiwi": "^2.1.1",
+    "microbundle": "^0.15.1",
+    "mkdirp": "^2.1.6",
+    "prettier": "^2.8.7",
+    "prettier-config-qiwi": "^2.1.0",
+    "rimraf": "^4.4.1",
+    "terser": "^5.16.8",
+    "tsc-esm-fix": "^2.20.12",
+    "tsm": "^2.3.0",
+    "typedoc": "^0.23.28",
+    "typescript": "5.0.3",
     "uvu": "^0.5.6"
   },
   "repository": {
